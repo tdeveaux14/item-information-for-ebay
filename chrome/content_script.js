@@ -4,9 +4,6 @@ function appendModule(items, sold, success, currency, median) {
   let element = document.createElement('div');
   const fragment = document.createDocumentFragment();
   if (!temp) {
-    temp = document.getElementById('LeftNavContainer');
-  }
-  if (!temp) {
     return;
   }
   element.className = 'info';
@@ -42,18 +39,9 @@ function appendModule(items, sold, success, currency, median) {
   element.appendChild(fragment);
   fragment.appendChild(element);
   element = document.createElement('div');
-  if (temp.id !== 'LeftNavContainer') {
-    element.className = 'scandal-placement';
-  } else {
-    element.className = 'modules';
-  }
+  element.className = 'scandal-placement';
   element.appendChild(fragment);
   fragment.appendChild(element);
-  if (temp.id === 'LeftNavContainer') {
-    element = document.createElement('div');
-    element.className = 'rtm-mb15px rtm-mt15px';
-    fragment.appendChild(element);
-  }
   temp.parentNode.insertBefore(fragment, temp.nextSibling);
 }
 
@@ -77,29 +65,16 @@ function main() {
   let median = '0.00';
   let success = '0';
   currency = currency[window.location.hostname];
-  if (!results) {
-    results = document.getElementsByClassName('rcnt')[0];
-  }
-  if (!results) {
-    results = document.getElementsByClassName('listingscnt')[0];
-  }
   if (results) {
-    results = Number(
-      results.textContent.match(/[,0-9]+/)[0].replace(/,/g, '')
-    );
+    results = Number(results.textContent.match(/[,0-9]+/)[0].replace(/,/g, ''));
   }
   if (listings) {
     listings = listings.getElementsByClassName('s-card');
-  } else {
-    listings = document.getElementsByClassName('sresult');
   }
   if (results && listings && listings.length) {
-    let className = 'positive s-card__price';
     let temp = {};
+    const className = 'positive s-card__price';
     const prices = [];
-    if (document.getElementsByClassName('bidsold').length) {
-      className = 'bidsold';
-    }
     while (items < results && items < listings.length) {
       temp = listings[items].getElementsByClassName(className)[0];
       if (temp) {
