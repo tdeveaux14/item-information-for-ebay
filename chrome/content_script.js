@@ -66,8 +66,7 @@ function main() {
     'www.ebay.com.au': 'AU $',
     'www.ebay.com.my': 'RM ',
     'www.ebay.com.sg': 'S$ ',
-    'www.ebay.ie': 'EUR ',
-    'www.ebay.ph': 'PHP '
+    'www.ebay.ie': 'EUR '
   };
   let results = document.getElementsByClassName(
     'srp-controls__count-heading'

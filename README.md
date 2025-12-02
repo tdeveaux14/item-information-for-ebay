@@ -6,8 +6,7 @@ Get sales data and price trends of completed listings
 
 ## Supported sites
 
-Australia, Canada, Ireland, Malaysia, Philippines, Singapore, United Kingdom,
-United States
+Australia, Canada, Ireland, Malaysia, Singapore, United Kingdom, United States
 
 ## How to use it
 

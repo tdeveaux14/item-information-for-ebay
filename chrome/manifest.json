@@ -17,8 +17,7 @@
         "https://www.ebay.com.my/sch*LH_Complete=1*",
         "https://www.ebay.com.sg/sch*LH_Complete=1*",
         "https://www.ebay.com/sch*LH_Complete=1*",
-        "https://www.ebay.ie/sch*LH_Complete=1*",
-        "https://www.ebay.ph/sch*LH_Complete=1*"
+        "https://www.ebay.ie/sch*LH_Complete=1*"
       ],
       "css": [
         "module.css"
