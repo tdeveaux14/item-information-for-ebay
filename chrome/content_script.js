@@ -90,12 +90,12 @@ function main() {
     );
   }
   if (listings) {
-    listings = listings.getElementsByClassName('s-item');
+    listings = listings.getElementsByClassName('s-card');
   } else {
     listings = document.getElementsByClassName('sresult');
   }
   if (results && listings && listings.length) {
-    let className = 's-item__price';
+    let className = 'positive s-card__price';
     let temp = {};
     const prices = [];
     if (document.getElementsByClassName('bidsold').length) {
@@ -103,9 +103,6 @@ function main() {
     }
     while (items < results && items < listings.length) {
       temp = listings[items].getElementsByClassName(className)[0];
-      if (temp && className === 's-item__price') {
-        temp = temp.getElementsByClassName('POSITIVE')[0];
-      }
       if (temp) {
         currency = temp.textContent.trim().match(/[^0-9]*/)[0];
         break;
@@ -115,9 +112,6 @@ function main() {
     items = 0;
     while (items < results && items < listings.length) {
       temp = listings[items].getElementsByClassName(className)[0];
-      if (temp && className === 's-item__price') {
-        temp = temp.getElementsByClassName('POSITIVE')[0];
-      }
       if (temp) {
         temp = temp.textContent.trim().match(/([^0-9]*)([,0-9]+\.[0-9]{2})/);
         if (currency && temp && currency === temp[1]) {
